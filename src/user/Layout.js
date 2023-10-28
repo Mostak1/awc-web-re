@@ -96,7 +96,7 @@ const sendEmail = async (e) => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand cll" href="#" to="/">
-            <img width="270px" src={logo} alt="" />
+            <img height="70px" src={logo} alt="" />
           </Link>
           <button
             className="navbar-toggler"

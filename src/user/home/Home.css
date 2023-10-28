@@ -1,75 +1,136 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Poppins:wght@300&display=swap');
-p{
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Poppins:wght@300&display=swap");
+p {
+  font-family: "Poppins", sans-serif;
 }
-.fnt2{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
+.fnt2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  font-weight: bold;
 }
-.fnt3{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 40px;
+.aw_head {
+  color: #014780;
+  border-left: #014780 5px solid;
+  padding-left: 15px;
+  margin-bottom: 20px;
 }
-@media screen and (max-width:600px) {
-    
-    .fs1{
-        width: fit-content;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        font-size: 40px;
-        font-weight: 900;
-        margin: 0 auto;
-    
-    }
+.aw_head1 {
+  color: #014780;
+  font-weight: bold;
+  border-bottom: 8px solid #014780;
+  width: fit-content;
+  margin: 0 auto;
 }
-.fs1{
+.aw_clr {
+  color: #014780;
+}
+.aw_bg {
+  background-color: #014780;
+  color: aliceblue;
+}
+.fnt3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .fs1 {
     width: fit-content;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     font-size: 40px;
     font-weight: 900;
     margin: 0 auto;
-    padding-top: 15%;
-
+  }
 }
-.fs2{
-    width: fit-content;
-    font-size: 80px;
-    font-weight: 700;
-    margin: 0 auto;
-
+.fs1 {
+  width: fit-content;
+  border-top: 2px solid #014780;
+  border-bottom: 2px solid #014780;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0 auto;
+  padding-top: 5%;
+  font-weight: bold;
 }
-.fs3{
-    width: fit-content;
-    font-size: 80px;
-    font-weight: 700;
-    margin: 0 auto;
-    padding-top: 10%;
-
+.fs2 {
+  width: fit-content;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.fs3 {
+  width: fit-content;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 .image {
-    background-image: url(../../assets/img/mt-1993-bg01.jpg);
-    background-position: top;
+  background-image: url(../../assets/img/awc.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #014780;
+}
+
+.aw_home {
+    position: relative;
+    background: #01478060;
+    overflow: hidden;
+}
+.aw_home::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: url(../../assets/img/awc_05.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-position: center center;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
 }
-.img02{
-    transform: translateY(150px) translateX(80px);
+.img02 {
+  transform: translateY(80px) translateX(140px);
 }
-.container1{
-    height: 600px;
-
+.container1 {
+  height: 600px;
 }
 /*  */
-.business_p{
-    font-size: 40px;
-    /* font-weight: 700; */
-    font-family: 'Cormorant Garamond', serif;
+.business_p {
+  font-size: 40px;
+  /* font-weight: 700; */
+  font-family: "Cormorant Garamond", serif;
 }
-.event_perfect{
-    background-image: url(../../assets/img/mt-1993-bg02.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
+.event_perfect {
+  margin: 0 0 100px 0;
+}
+.aw_card {
+  background-color: #014780;
+  padding: 25px;
+  border-radius: 20px;
+  color: aquamarine;
+}
+.aw_card:hover {
+  color: #014780;
+  background-color: aquamarine;
+  transition: .9s;
+}
+
+.aw_midtitle {
+  background-color: #014780;
+  padding: 20px 0 20px 0;
+  font-size: 40px;
+  color: aquamarine;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
 }
