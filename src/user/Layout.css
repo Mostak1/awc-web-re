@@ -11,7 +11,7 @@ a,p{
     /* font-family: 'Cormorant Garamond', serif; */
 }
 .btnsr{
-    background-color: #f3e5dd;
+    background-color: #014780;
     position: fixed;
     right: 5px;
     bottom: 80px;
@@ -20,15 +20,15 @@ a,p{
     height: 80px;
     border: 0;
     border-radius: 50%;
-    box-shadow: 0 0 8px rgb(236, 177, 177);
+    box-shadow: 0 0 8px aliceblue;
     
 }
 .titleclr{
-color: #BE9A82;
+color: #fefefe;
 font-family: 'Cormorant Garamond', serif;
 }
 .btnsr:hover{
-    background-color: #BE9A82;
+    background-color: #014780;
     border: 1px solid #ece5df;
 }
 .close_btn {
@@ -37,11 +37,11 @@ font-family: 'Cormorant Garamond', serif;
     right: -0px;
     padding: 5px;
     /* background-color: #BE9A82; */
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
   }
 li a:hover{
-    color: #BE9A82;
-    background-color: #f3d2bc;
+    color: #ffffff;
+    background-color: #014780;
 
 }

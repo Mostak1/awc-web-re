@@ -134,3 +134,12 @@ p {
   font-family: "Cormorant Garamond", serif;
   font-weight: bold;
 }
+.aw_scard{
+    margin: 50px 0 50px 0;
+    padding: 30px;
+    background-color: rgb(252, 254, 255);
+    
+}
+.aw_scard img{
+   border-radius: 10px 10px 10px 0;
+}

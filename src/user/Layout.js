@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./Layout.css";
-import logo from "../assets/img/ws.png";
 import Swal from 'sweetalert2';
 
 import {
@@ -16,10 +15,12 @@ import {
   FaEnvelope,
   FaPhone,
   FaPrint,
+  FaYoutube,
 } from "react-icons/fa";
 import auth from "../firebase/FirebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { UserName } from "./componants/UserName";
+import logo from "../assets/img/Logo.png";
 
 export const Layout = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -345,7 +346,7 @@ otlate showing here
 Footer showing here
 *********************************/}
       {/*{<!-- Footer -->} */}
-      <footer className="text-center text-lg-start bg-white text-muted">
+      <footer className="text-center text-lg-start aw_clr">
         {/*{<!-- Section: Social media -->} */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           {/*{<!-- Left -->} */}
@@ -356,24 +357,22 @@ Footer showing here
 
           {/*{<!-- Right -->} */}
           <div>
-            <a href="" className="me-4 fclr ">
-              <FaFacebook size={30} color="#BE9A82" />
+            <a href="https://www.facebook.com/awcbd.org/" target="blank" className="me-4 fclr ">
+              <FaFacebook size={30}  />
             </a>
-            <a href="" className="me-4 link-secondary">
-              <FaTwitter size={30} color="#BE9A82" />
+            <a href="" className="me-4 ">
+              <FaTwitter size={30}  />
             </a>
-            <a href="" className="me-4 link-secondary">
-              <FaGoogle size={30} color="#BE9A82" />
+            <a href="https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw" target="blank" className="me-4 ">
+              <FaYoutube size={30}  />
             </a>
-            <a href="" className="me-4 link-secondary">
-              <FaInstagram size={30} color="#BE9A82" />
+            <a href="" className="me-4 ">
+              <FaInstagram size={30}  />
             </a>
-            <a href="" className="me-4 link-secondary">
-              <FaLinkedin size={30} color="#BE9A82" />
+            <a href="https://www.linkedin.com/in/american-wellness-center-bd/" target="blank" className="me-4 ">
+              <FaLinkedin size={30}  />
             </a>
-            <a href="" className="me-4 link-secondary">
-              <FaGithub size={30} color="#BE9A82" />
-            </a>
+           
           </div>
           {/*{<!-- Right -->} */}
         </section>
@@ -389,9 +388,7 @@ Footer showing here
                 {/*{<!-- Content -->} */}
                 <img width="270px" src={logo} alt="" />
                 <p>
-                  Wedding Solutions is a professional event-planning and
-                  catering service that organizes both corporate and personal
-                  events. We’ll make your special day long-remembered!
+                We offer alternative functional medicine consultation, regenerative therapies, and evidence-based Nutrition in addition to Modern Medicine to complete the reverse of your health conditions.
                 </p>
               </div>
               {/*{<!-- Grid column -->} */}
@@ -455,18 +452,18 @@ Footer showing here
                 {/*{<!-- Links -->} */}
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <FaHome size={20} />
-                  273/7 Shenpara Parbata Dhaka-1216
+                  <FaHome size={20} /> 
+                  Islam Tower, Shukrabad Bus Stand, Dhaka, Bangladesh
                 </p>
                 <p>
                   <FaEnvelope size={20} />
-                  tech2click@example.com
+                   acrhbd@gmail.com
                 </p>
                 <p>
-                  <FaPhone size={20} /> +88 01 234 567 88
+                  <FaPhone size={20} /> +8809666-747470
                 </p>
                 <p>
-                  <FaPrint size={20} /> +88 01 234 567 89
+                  <FaPrint size={20} /> 
                 </p>
               </div>
               {/*{<!-- Grid column -->} */}
@@ -477,10 +474,10 @@ Footer showing here
         {/*{<!-- Section: Links  -->} */}
 
         {/*{<!-- Copyright -->} */}
-        <div className="text-center p-4" style={{ backgroundColor: bgclr1 }}>
-          © 2023 Copyright:
-          <a className="text-reset fw-bold" href="">
-            Md Mostak Ahmed
+        <div className="text-center p-4">
+          © 2023 Copyright: 
+          <a className=" fw-bold" href="https://www.mostaksarker.com/">
+             American Wellness Center; 
           </a>
         </div>
         {/* {/*{<!-- Copyright -->} */}
