@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./Layout.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 import {
   FaReact,
@@ -22,12 +22,19 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { UserName } from "./componants/UserName";
 import logo from "../assets/img/Logo.png";
 
+// fontawsome Icon
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBook,
+} from "@fortawesome/free-solid-svg-icons";
+
+
 export const Layout = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user_email, setUser_email] = useState("");
 
-  // send email 
-
+  // send email
 
   //send email
 
@@ -56,49 +63,100 @@ export const Layout = () => {
         alert(error.message);
       });
   };
-// ****************email send****************
-const form = useRef();
-const sendEmail = async (e) => {
-  e.preventDefault();
+  // ****************email send****************
+  const form = useRef();
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-  const formData = new FormData(form.current);
+    const formData = new FormData(form.current);
 
-  try {
-    const response = await fetch("https://mostaksarker.com/API/mail.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Email sent successfully. We will contact you soon.',
+    try {
+      const response = await fetch("https://mostaksarker.com/API/mail.php", {
+        method: "POST",
+        body: formData,
       });
-    } else {
+
+      if (response.ok) {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Email sent successfully. We will contact you soon.",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Email sending failed",
+        });
+      }
+    } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Email sending failed',
+        icon: "error",
+        title: "Error",
+        text: "An error occurred",
       });
     }
-  } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'An error occurred',
-    });
-  }
-};
+  };
   //************************     ***************/
   const bgclr1 = "rgba(0, 0, 0, 0.025)";
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-5">
+            <Link className="text-decoration-none" href="#" to="/">
+              <div className="row">
+                <div className="col-4">
+                  <img className="img-fluid" src={logo} alt="" />{" "}
+                </div>
+                <div className="col-8 fs-3 aw_clr mt-3">
+                  The First and Only INTEGRATIVE CENTER
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="col-md-4 mt-2">
+            <div className="align-middle">
+              <a
+                href="https://www.facebook.com/awcbd.org/"
+                target="blank"
+                className="me-4 fclr "
+              >
+                <FaFacebook size={30} />
+              </a>
+              <a href="" className="me-4 text-dark">
+                <FaTwitter size={30} />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw"
+                target="blank"
+                className="me-4 text-danger"
+              >
+                <FaYoutube size={30} />
+              </a>
+              <a href="" className="me-4 " style={{ color: "radial-gradient(ellipse at 0 0, 100px 50px, purple, red)" }}>
+                <FaInstagram size={30} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/american-wellness-center-bd/"
+                target="blank"
+                className="me-4 "
+              >
+                <FaLinkedin size={30} />
+              </a>
+            </div>
+            <div className="fs-3 aw_clr">+8809666-747470</div>
+          </div>
+          <div className="col-md-3">
+            <div className="aw_button  fs-3 mt-4">
+            <FontAwesomeIcon icon={faBook} /> Appointment
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav className="navbar navbar-expand-lg navbar-light aw_bg">
         <div className="container">
-          <Link className="navbar-brand cll" href="#" to="/">
-            <img height="70px" src={logo} alt="" />
-          </Link>
+          
           <button
             className="navbar-toggler"
             type="button"
@@ -113,12 +171,16 @@ const sendEmail = async (e) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link text-black fs-4" aria-current="page" to="/">
+                <Link
+                  className="nav-link aw_navtext fs-4"
+                  aria-current="page"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-black fs-4" to="/about">
+                <Link className="nav-link aw_navtext fs-4" to="/about">
                   About Us
                 </Link>
               </li>
@@ -132,9 +194,9 @@ const sendEmail = async (e) => {
                             } */}
 
               {/* {isLogin && */}
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown ">
                 <Link
-                  className="nav-link dropdown-toggle text-black fs-4"
+                  className="nav-link dropdown-toggle aw_navtext fs-4"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -142,24 +204,30 @@ const sendEmail = async (e) => {
                 >
                   Decorations
                 </Link>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu aw_bg">
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/gatedecoration">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/gatedecoration"
+                    >
                       Gate Decorations
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/stage">
+                    <Link className="dropdown-item aw_navtext fs-6" to="/stage">
                       Stage Decorations
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/hall">
+                    <Link className="dropdown-item aw_navtext fs-6" to="/hall">
                       Hall Decorations
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/photoshoot">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/photoshoot"
+                    >
                       Photoshoot Decorations
                     </Link>
                   </li>
@@ -167,25 +235,25 @@ const sendEmail = async (e) => {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/selected">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/selected"
+                    >
                       Selected Items
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item text-black fs-6" to="/submititem">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/submititem"
+                    >
                       Choice List
                     </Link>
                   </li>
                 </ul>
               </li>
-
-
-
             </ul>
-            {/* {/*{<!-- <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> -->} */}
+          
           </div>
 
           <div className="nav-item">
@@ -203,32 +271,33 @@ const sendEmail = async (e) => {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               {!isLogin && (
                 <li className="nav-item">
-                  <Link to="login" className="nav-link text-black fs-4">
+                  <Link to="login" className="nav-link aw_navtext fs-4">
                     Login
                   </Link>
                 </li>
               )}
               {isLogin && (
-
-
                 <li className="nav-item dropdown">
                   <Link
-                    className="nav-link dropdown-toggle text-black fs-4"
+                    className="nav-link dropdown-toggle aw_navtext fs-4"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                   Welcome <UserName />
+                    Welcome
                   </Link>
-                  <ul className="dropdown-menu text-black fs-6">
+                  <ul className="dropdown-menu aw_navtext aw_bg">
                     <li>
                       <Link className="dropdown-item" to="/userDetails">
                         Profile
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item text-black fs-6" to="/editprofile">
+                      <Link
+                        className="dropdown-item aw_navtext fs-6"
+                        to="/editprofile"
+                      >
                         Edit Profile
                       </Link>
                     </li>
@@ -237,13 +306,12 @@ const sendEmail = async (e) => {
                       <Link
                         onClick={handleLogout}
                         style={{ cursor: "pointer" }}
-                        className="dropdown-item text-black fs-6"
+                        className="dropdown-item aw_navtext fs-6"
                       >
                         Log Out
                       </Link>
                       {/* <p>{user_email}</p> */}
                     </li>
-
                   </ul>
                 </li>
               )}
@@ -269,7 +337,10 @@ const sendEmail = async (e) => {
               aria-label="Close"
             ></button>
             <div className="modal-header">
-              <p className="modal-title mx-auto titleclr" id="exampleModalLabel">
+              <p
+                className="modal-title mx-auto titleclr"
+                id="exampleModalLabel"
+              >
                 <span className="title text-center d-block fs-1">
                   Request A Callback
                 </span>{" "}
@@ -281,7 +352,7 @@ const sendEmail = async (e) => {
             </div>
             <p className="titleclr"></p>
             <div className="modal-body">
-            {/* <form ref={form} onSubmit={sendEmail}>
+              {/* <form ref={form} onSubmit={sendEmail}>
               <label className="form-label">Name</label>
               <input className="form-control" type="text" name="user_name" />
               <label className="form-label">Email</label>
@@ -323,11 +394,11 @@ const sendEmail = async (e) => {
                   required
                 />
 
-
-                <input className="btn btn-outline-secondary w-100 mb-2 text-center mx-auto" type="submit"
-                value="Send Email" />
-
-
+                <input
+                  className="btn btn-outline-secondary w-100 mb-2 text-center mx-auto"
+                  type="submit"
+                  value="Send Email"
+                />
               </form>
             </div>
             <div className="modal-footer">
@@ -357,22 +428,33 @@ Footer showing here
 
           {/*{<!-- Right -->} */}
           <div>
-            <a href="https://www.facebook.com/awcbd.org/" target="blank" className="me-4 fclr ">
-              <FaFacebook size={30}  />
+            <a
+              href="https://www.facebook.com/awcbd.org/"
+              target="blank"
+              className="me-4 fclr "
+            >
+              <FaFacebook size={30} />
             </a>
             <a href="" className="me-4 ">
-              <FaTwitter size={30}  />
+              <FaTwitter size={30} />
             </a>
-            <a href="https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw" target="blank" className="me-4 ">
-              <FaYoutube size={30}  />
+            <a
+              href="https://www.youtube.com/channel/UCcXjY_VSZGQvmuhJMg7hzLw"
+              target="blank"
+              className="me-4 "
+            >
+              <FaYoutube size={30} />
             </a>
             <a href="" className="me-4 ">
-              <FaInstagram size={30}  />
+              <FaInstagram size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/american-wellness-center-bd/" target="blank" className="me-4 ">
-              <FaLinkedin size={30}  />
+            <a
+              href="https://www.linkedin.com/in/american-wellness-center-bd/"
+              target="blank"
+              className="me-4 "
+            >
+              <FaLinkedin size={30} />
             </a>
-           
           </div>
           {/*{<!-- Right -->} */}
         </section>
@@ -388,7 +470,10 @@ Footer showing here
                 {/*{<!-- Content -->} */}
                 <img width="270px" src={logo} alt="" />
                 <p>
-                We offer alternative functional medicine consultation, regenerative therapies, and evidence-based Nutrition in addition to Modern Medicine to complete the reverse of your health conditions.
+                  We offer alternative functional medicine consultation,
+                  regenerative therapies, and evidence-based Nutrition in
+                  addition to Modern Medicine to complete the reverse of your
+                  health conditions.
                 </p>
               </div>
               {/*{<!-- Grid column -->} */}
@@ -396,25 +481,25 @@ Footer showing here
               {/*{<!-- Grid column -->} */}
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 {/*{<!-- Links -->} */}
-                <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+                <h6 className="text-uppercase fw-bold mb-4">Services</h6>
                 <p>
                   <a href="#!" className="text-reset">
-                    Engagement
+                    Hospital
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Corporate Event
+                    Medicine Shop
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Business Meeting
+                    Green Kitchen
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Birthday Party
+                    Doctor
                   </a>
                 </p>
               </div>
@@ -452,18 +537,18 @@ Footer showing here
                 {/*{<!-- Links -->} */}
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <FaHome size={20} /> 
+                  <FaHome size={20} />
                   Islam Tower, Shukrabad Bus Stand, Dhaka, Bangladesh
                 </p>
                 <p>
                   <FaEnvelope size={20} />
-                   acrhbd@gmail.com
+                  acrhbd@gmail.com
                 </p>
                 <p>
                   <FaPhone size={20} /> +8809666-747470
                 </p>
                 <p>
-                  <FaPrint size={20} /> 
+                  <FaPrint size={20} />
                 </p>
               </div>
               {/*{<!-- Grid column -->} */}
@@ -475,9 +560,9 @@ Footer showing here
 
         {/*{<!-- Copyright -->} */}
         <div className="text-center p-4">
-          © 2023 Copyright: 
-          <a className=" fw-bold" href="https://www.mostaksarker.com/">
-             American Wellness Center; 
+          <span>© 2023 Copyright:</span>
+          <a className="fw-bold" href="https://www.mostaksarker.com/">
+            American Wellness Center;
           </a>
         </div>
         {/* {/*{<!-- Copyright -->} */}

@@ -6,6 +6,21 @@ p {
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
   font-weight: bold;
+  
+}
+.aw_button{
+  color: white;
+  background-color: #014780;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+}
+.aw_button:hover{
+background-color: #ffffff;
+color: #014780;
+border:2px solid #014780;
+transition: .8s;
 }
 .aw_head {
   color: #014780;
@@ -117,13 +132,16 @@ p {
 .aw_card {
   background-color: #014780;
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 25px;
   color: aquamarine;
+  box-shadow: 0 0px 5px 5px rgba(222, 220, 220, 0.878);
 }
 .aw_card:hover {
   color: #014780;
   background-color: aquamarine;
   transition: .9s;
+  box-shadow: 0 0px 5px 5px #014780;
+
 }
 
 .aw_midtitle {

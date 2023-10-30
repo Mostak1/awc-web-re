@@ -33,9 +33,9 @@ export const Home = () => {
           <p className=" text-center fs1 fnt2" data-aos="fade-up">
             Welcome to American Wellness Center
           </p>
-          <p className=" text-center fs2 fnt2" data-aos="fade-down">
+          {/* <p className=" text-center fs2 fnt2 pb-3" data-aos="fade-down">
             The Best Preventive Solutions
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="container mt-4">
@@ -52,18 +52,6 @@ export const Home = () => {
               regain perfect health.
             </p>
             <h3 className="fnt3 mb-5"></h3>
-            {/*
-            <div className="mx-auto text-center">
-
-              <span className="me-4">Golf Club</span>
-              <span className="me-4">Sena Malancha</span>
-              <span className="me-2">BGB Convension Hall</span>
-              <div className="row">
-                <div className="col"><img src={logo} alt="" /></div>
-                <div className="col"><img src={img2} alt="" /></div>
-                <div className="col"><img src={img3} alt="" /></div>
-              </div>
-            </div> */}
           </div>
           <div className="col-md-6 text-center">
             <div className="fnt3 my-3 aw_head1">Who We Are</div>
@@ -189,26 +177,43 @@ export const Home = () => {
       </div>
 
       <div className="container my-4">
-        <div className="row programme_img">
-          <div className="col-md-6">
-            <h3 className="fnt3 my-4">
-              ----We are premier catering and event planning company
-            </h3>
-            <div className="">
-              <img src={img6} className="img-fluid" alt="Responsive image" />
-              <p className="business_p">Business Dinners and Meetings</p>
-              <img src={img7} className="img-fluid" alt="Responsive image" />
-              <p className="business_p">Corporate Event Management</p>
+        <div className="aw_head1 fs-1 my-3">
+          Problems we can fix. Holistically
+        </div>
+        <div className="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div className="col">
+            <div className="aw_card text-center h-100">
+              <h3>GUT</h3>
+              Food Allergy/Sensitivity <br /> Asthma <br /> Arthritis/Gout{" "}
+              <br />
+              Cough/Chronic Constipation/Diarrhea <br /> SIFO/SIBO <br />
+              Dermatitis/Eczema Leaky Gut Irritable Bowel Syndrome Acid Reflux
+              Crohn’s / <br />
+              Colitis <br /> Irritable Bowel Syndrome
             </div>
-
-            <br />
           </div>
-          <div className="col-md-6">
-            <div className="">
-              <img src={img8} className="img-fluid" alt="" />
-              <p className="business_p">Engagement and Wedding Parties</p>
-              <img src={img9} className="img-fluid" alt="" />
-              <p className="business_p">Birthday and Graduation Parties</p>
+          <div className="col">
+            <div className="text-center aw_card h-100">
+              <h3>HORMONES</h3>
+              Chronic Stress/Anxiety <br />
+              Endometriosis/Ovarian Cysts/PCOS <br />
+              Hypothyroidism/HPA Dysfunction <br />
+              Ovarian/Breast Tumor/Polyp <br /> Menopause / Peri Menopause
+              Adrenal <br /> Dysregulation/Fatigue Weight <br />
+              Management Osteoarthritis/Osteoporosis
+              <br />
+              Sexual Health
+            </div>
+          </div>
+          <div className="col">
+            <div className="text-center aw_card h-100">
+              <h3>CARDIO METABOLIC</h3>
+              Cardiovascular Health <br />
+              Diabetes/Pre-diabetes High Cholesterol <br /> High Blood Pressure/{" "}
+              <br />
+              Hypertension Heart Diseases Fatty Liver Disease <br />
+              Upper Respiratory Infections <br />
+              Obesity
             </div>
           </div>
         </div>
