@@ -68,7 +68,7 @@ export const Login = () => {
               </div>
 
               <div className="form-floating mb-3">
-                <input type="submit" className="btns" id="floatingPassword" value={'LogIn'} />
+                <input type="submit" className="aw_button" id="floatingPassword" value={'LogIn'} />
                 {/* <button type='button' className='btns' >Submit</button> */}
               </div>
             </form>

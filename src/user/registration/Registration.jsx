@@ -5,7 +5,7 @@ import logo from "../../assets/img/ws.png";
 import { FaFacebook, FaGooglePlusG, FaLinkedinIn } from "react-icons/fa";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 import {
   getAuth,
@@ -39,8 +39,7 @@ export const Registration = () => {
         .then((userCredential) => {
           let user = userCredential.user;
           if (user) {
-            const url =
-              "https://mostaksarker.com/API/createuser.php";
+            const url = "https://mostaksarker.com/API/createuser.php";
 
             let fData = new FormData();
             fData.append("name", name);
@@ -95,82 +94,77 @@ export const Registration = () => {
                 <input
                   type="text"
                   className="form-control"
-                  id="floatingInput"
+                  id="name"
                   placeholder="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
-                <label for="floatingInput">Name</label>
+                <label for="name">Name</label>
               </div>
               <div className="form-floating mb-3">
                 <input
                   type="number"
                   className="form-control"
-                  id="floatingInput"
+                  id="mobile"
                   placeholder="mobile no"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
                 />
-                <label for="floatingInput">Mobile</label>
+                <label for="mobile">Mobile</label>
               </div>
               <div className="form-floating mb-3">
                 <input
                   type="email"
                   className="form-control"
-                  id="floatingInput"
+                  id="email"
                   placeholder="name@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label for="floatingInput">Email address</label>
+                <label for="email">Email address</label>
               </div>
               <div className="form-floating mb-3">
-                                <input type="text" className="form-control" id="floatingInput" placeholder="address" value={address} onChange={(e) => setAddress(e.target.value)} />
-                                <label for="floatingInput">Address</label>
-                            </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="floatingInput"
+                  placeholder="address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+                <label for="floatingInput">Address</label>
+              </div>
               <div className="form-floating mb-3">
                 <input
                   type="password"
                   className="form-control"
-                  id="floatingPassword"
+                  id="password"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <label for="floatingPassword">Password</label>
+                <label for="password">Password</label>
               </div>
               <div className="form-floating mb-3">
                 <input
                   type="password"
                   className="form-control"
-                  id="floatingPassword"
+                  id="password1"
                   placeholder="Password"
                   value={rpassword}
                   onChange={(e) => setRpassword(e.target.value)}
                 />
-                <label for="floatingPassword">Re-Type Password</label>
+                <label for="password1">Re-Type Password</label>
               </div>
               <div className="form-floating mb-3">
-                <input type="submit" className="btns" value="Register" />
+                <input type="submit" className="aw_button" value="Register" />
 
                 {/* <button type='button' className='btns' onClick={handleSubmit} >Submit</button> */}
               </div>
             </form>
             <div className="text-center mb-3 txclr">
-              <span className="">
-                Have an Account Go to <Link to="/login">LogIn</Link> Or
-                Registration With Social Site
-              </span>
               <div className="">
-                <a href="#" className="me-2">
-                  <FaFacebook size={25} />
-                </a>
-                <a href="#" className="me-2">
-                  <FaGooglePlusG size={35} />
-                </a>
-                <a href="#" className="">
-                  <FaLinkedinIn size={25} />
-                </a>
+                Have an Account Go to <Link to="/login">LogIn</Link>
               </div>
               <span></span>
             </div>

@@ -13,11 +13,7 @@ import { Nopage } from './user/Nopage';
 import { About } from "./user/about/About";
 import { Login } from "./user/login/Login";
 import { Registration } from "./user/registration/Registration";
-import { Gatedecoration } from "./user/product/Gatedecoration";
-import { Stagedecoration } from "./user/product/Stagedecoration";
-import { Halldec } from "./user/product/Halldec";
-import { Photoshootdec } from "./user/product/Photoshootdec";
-import { Selecteditem } from "./user/product/Selecteditem";
+
 //admin
 import PrivateRoute from "./Privateroute";
 import DashLayout from "./admin/DashLayout";
@@ -27,6 +23,9 @@ import User from "./admin/pages/User";
 import { Submititem } from "./user/product/Submititem";
 import { UserDetails } from "./user/UserDetails";
 import { Editprofile } from "./user/Editprofile";
+import Card from "./user/pages/Card";
+import Doctor from "./user/about/Doctor";
+import StemCell from "./user/pages/StemCell";
 
 function App() {
   return (
@@ -41,14 +40,12 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="login" element={<Login />} />
             <Route path="registration" element={<Registration />} />
-            <Route path="gatedecoration" element={<Gatedecoration />} />
-            <Route path="stage" element={<Stagedecoration />} />
-            <Route path="hall" element={<Halldec />} />
-            <Route path="photoshoot" element={<Photoshootdec />} />
-            <Route path="selected" element={<Selecteditem />} />
-            <Route path="submititem" element={<Submititem />} />
+           
             <Route path="userDetails" element={<UserDetails />} />
             <Route path="editprofile" element={<Editprofile />} />
+            <Route path="membership-facilities" element={<Card />} />
+            <Route path="doctor" element={<Doctor />} />
+            <Route path="stemcell" element={<StemCell />} />
             <Route path="*" element={<Nopage />} />
           </Route>
           <Route path="dashboard" element={

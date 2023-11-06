@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Poppins:wght@300&display=swap");
-p {
-  font-family: "Poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Roboto', sans-serif;
 }
 .fnt2 {
   font-family: "Cormorant Garamond", serif;
@@ -14,7 +16,7 @@ p {
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-  width: fit-content;
+  width: 100%;
 }
 .aw_button:hover{
 background-color: #ffffff;

@@ -102,7 +102,7 @@ export const Layout = () => {
   return (
     <div>
       <div className="container">
-        <div className="row">
+        <div className="row mb-2">
           <div className="col-md-5">
             <Link className="text-decoration-none" href="#" to="/">
               <div className="row">
@@ -148,9 +148,20 @@ export const Layout = () => {
             <div className="fs-3 aw_clr">+8809666-747470</div>
           </div>
           <div className="col-md-3">
-            <div className="aw_button  fs-3 mt-4">
-            <FontAwesomeIcon icon={faBook} /> Appointment
-            </div>
+            {/* <div className="aw_button  fs-3 mt-4">
+            
+            </div> */}
+            <div className="nav-item">
+            {/* {/*{<!-- Button trigger modal -->} */}
+            <button
+              type="button"
+              className="aw_button  fs-3 mt-4"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <FontAwesomeIcon icon={faBook} /> Appointment
+            </button>
+          </div>
           </div>
         </div>
       </div>
@@ -172,16 +183,62 @@ export const Layout = () => {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
-                  className="nav-link aw_navtext fs-4"
+                  className="nav-link aw_navtext fs-4 me-3"
                   aria-current="page"
                   to="/"
                 >
                   Home
                 </Link>
               </li>
+             
+              <li className="nav-item dropdown ">
+                <Link
+                  className="nav-link dropdown-toggle aw_navtext fs-4 me-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About
+                </Link>
+                <ul className="dropdown-menu aw_bg">
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/about"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item aw_navtext fs-6" to="/doctor">
+                      Our Doctors
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item aw_navtext fs-6" to="/founder">
+                      Founder
+                    </Link>
+                  </li>
+                  
+                </ul>
+              </li>
               <li className="nav-item">
-                <Link className="nav-link aw_navtext fs-4" to="/about">
-                  About Us
+                <Link
+                  className="nav-link aw_navtext fs-4 me-3"
+                  aria-current="page"
+                  to="/membership-facilities"
+                >
+                  Card
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link aw_navtext fs-4 me-3"
+                  aria-current="page"
+                  to="/stemcell"
+                >
+                  Stem Cell Therapy
                 </Link>
               </li>
               {/* <li className="nav-item">
@@ -194,7 +251,7 @@ export const Layout = () => {
                             } */}
 
               {/* {isLogin && */}
-              <li className="nav-item dropdown ">
+              {/* <li className="nav-item dropdown ">
                 <Link
                   className="nav-link dropdown-toggle aw_navtext fs-4"
                   href="#"
@@ -251,22 +308,12 @@ export const Layout = () => {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           
           </div>
 
-          <div className="nav-item">
-            {/* {/*{<!-- Button trigger modal -->} */}
-            <button
-              type="button"
-              className="btnsr"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Send <br /> Message
-            </button>
-          </div>
+          
           <div className="nav-item">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               {!isLogin && (
@@ -320,7 +367,7 @@ export const Layout = () => {
         </div>
       </nav>
 
-      {/* {/*{<!-- Modal -->} */}
+      {/* {/*{<!-- Modal Body -->} */}
       <div
         className="modal fade"
         id="exampleModal"
@@ -338,14 +385,14 @@ export const Layout = () => {
             ></button>
             <div className="modal-header">
               <p
-                className="modal-title mx-auto titleclr"
+                className="modal-title mx-auto "
                 id="exampleModalLabel"
               >
                 <span className="title text-center d-block fs-1">
-                  Request A Callback
+                  Make An Appointment
                 </span>{" "}
                 <span>
-                  We can call you in 30 seconds, just enter your number below
+                  We can call you in few minutes, just enter your number below
                 </span>
               </p>
               <br />

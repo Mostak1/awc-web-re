@@ -3,13 +3,13 @@ import { getAnalytics } from "firebase/analytics";
 import {getAuth} from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD2VP4F3Z0rwZe_ygjQmnjxOr4KYDI6Rr0",
-  authDomain: "wedding-solutions-6e2d4.firebaseapp.com",
-  projectId: "wedding-solutions-6e2d4",
-  storageBucket: "wedding-solutions-6e2d4.appspot.com",
-  messagingSenderId: "417299750822",
-  appId: "1:417299750822:web:63e2d85c57d2b81f483967",
-  measurementId: "G-25GRDEGDP3"
+  apiKey: "AIzaSyD9RRXPAHNCpFCTfe-rMjaC5wZYxnMsRVQ",
+  authDomain: "awc-web.firebaseapp.com",
+  projectId: "awc-web",
+  storageBucket: "awc-web.appspot.com",
+  messagingSenderId: "625325725219",
+  appId: "1:625325725219:web:f4cbe20b9ee507a9fc4396",
+  measurementId: "G-JC8KCR9144"
 };
 
 // Initialize Firebase

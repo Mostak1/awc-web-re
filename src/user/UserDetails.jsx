@@ -36,7 +36,6 @@ export const UserDetails = () => {
   // data get from api
   const dataApi =
     "https://mostaksarker.com/API/alltableapi.php";
-
   //get data for users table..
   useEffect(() => {
     const fetchOrders = async () => {
