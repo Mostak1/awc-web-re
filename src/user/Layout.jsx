@@ -25,10 +25,7 @@ import logo from "../assets/img/Logo.png";
 // fontawsome Icon
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBook,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faBook } from "@fortawesome/free-solid-svg-icons";
 
 export const Layout = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -71,7 +68,7 @@ export const Layout = () => {
     const formData = new FormData(form.current);
 
     try {
-      const response = await fetch("https://mostaksarker.com/API/mail.php", {
+      const response = await fetch("https://awcbd.org/mail/mail.php", {
         method: "POST",
         body: formData,
       });
@@ -109,8 +106,8 @@ export const Layout = () => {
                 <div className="col-4">
                   <img className="img-fluid" src={logo} alt="" />{" "}
                 </div>
-                <div className="col-8 fs-3 aw_clr mt-3">
-                  The First and Only INTEGRATIVE CENTER
+                <div className="col-8 fs-4 aw_clr mt-3">
+                  The First and Only INTEGRATIVE CENTER In Bangladesh
                 </div>
               </div>
             </Link>
@@ -134,7 +131,14 @@ export const Layout = () => {
               >
                 <FaYoutube size={30} />
               </a>
-              <a href="" className="me-4 " style={{ color: "radial-gradient(ellipse at 0 0, 100px 50px, purple, red)" }}>
+              <a
+                href=""
+                className="me-4 "
+                style={{
+                  color:
+                    "radial-gradient(ellipse at 0 0, 100px 50px, purple, red)",
+                }}
+              >
                 <FaInstagram size={30} />
               </a>
               <a
@@ -152,22 +156,21 @@ export const Layout = () => {
             
             </div> */}
             <div className="nav-item">
-            {/* {/*{<!-- Button trigger modal -->} */}
-            <button
-              type="button"
-              className="aw_button  fs-3 mt-4"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <FontAwesomeIcon icon={faBook} /> Appointment
-            </button>
-          </div>
+              {/* {/*{<!-- Button trigger modal -->} */}
+              <button
+                type="button"
+                className="aw_button  fs-5 mt-4 w-75"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <FontAwesomeIcon icon={faBook} /> Appointment
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light aw_bg">
         <div className="container">
-          
           <button
             className="navbar-toggler"
             type="button"
@@ -190,7 +193,7 @@ export const Layout = () => {
                   Home
                 </Link>
               </li>
-             
+
               <li className="nav-item dropdown ">
                 <Link
                   className="nav-link dropdown-toggle aw_navtext fs-4 me-3"
@@ -203,24 +206,62 @@ export const Layout = () => {
                 </Link>
                 <ul className="dropdown-menu aw_bg">
                   <li>
-                    <Link
-                      className="dropdown-item aw_navtext fs-6"
-                      to="/about"
-                    >
+                    <Link className="dropdown-item aw_navtext fs-6" to="/about">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item aw_navtext fs-6" to="/doctor">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/doctor"
+                    >
                       Our Doctors
                     </Link>
                   </li>
+                  
                   <li>
-                    <Link className="dropdown-item aw_navtext fs-6" to="/founder">
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/founder"
+                    >
                       Founder
                     </Link>
                   </li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown ">
+                <Link
+                  className="nav-link dropdown-toggle aw_navtext fs-4 me-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Service
+                </Link>
+                <ul className="dropdown-menu aw_bg">
+                  <li>
+                    <Link className="dropdown-item aw_navtext fs-6" to="/vitamin">
+                    IV vitamin therapy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/doctor"
+                    >
+                      Our Doctors
+                    </Link>
+                  </li>
                   
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/founder"
+                    >
+                      Founder
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
@@ -310,10 +351,8 @@ export const Layout = () => {
                 </ul>
               </li> */}
             </ul>
-          
           </div>
 
-          
           <div className="nav-item">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               {!isLogin && (
@@ -384,10 +423,7 @@ export const Layout = () => {
               aria-label="Close"
             ></button>
             <div className="modal-header">
-              <p
-                className="modal-title mx-auto "
-                id="exampleModalLabel"
-              >
+              <p className="modal-title mx-auto " id="exampleModalLabel">
                 <span className="title text-center d-block fs-1">
                   Make An Appointment
                 </span>{" "}
@@ -412,8 +448,20 @@ export const Layout = () => {
                 value="Send Email"
               />
             </form> */}
-              <form id="myForm" ref={form} onSubmit={sendEmail}>
-                {/* {/*{<!-- <label className="form-control" for="name">Name:</label> -->} */}
+              <div className="">
+                {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScK3XA_MCVuqJS1n8YUol6TulEHIydBOf1ZcvPrUvO7iUSj6A/viewform?fbzx=-8665727092727921790" className="w-100 full-height-container"  frameborder="0"></iframe> */}
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScgOBupbtdMFc4xZO9FPlwrmmKK9rTrAV5RrbF478G0GHCXoQ/viewform?embedded=true"
+                  className="w-100 full-height-container"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                >
+                  Loading…
+                </iframe>
+              </div>
+              {/* <form id="myForm" ref={form} onSubmit={sendEmail}>
+               
                 <input
                   className="form-control mb-2"
                   type="text"
@@ -422,35 +470,32 @@ export const Layout = () => {
                   placeholder="Name*"
                   required
                 />
-                {/* {/*{<!-- <label className="form-control" for="email">Email:</label> -->} */}
+               
                 <input
                   className="form-control mb-2"
-                  type="email"
+                  type="text"
                   id="user_email"
                   name="user_email"
-                  placeholder="email@gmail.com"
+                  placeholder="01832546585"
                   required
                 />
-                {/* {/*{<!-- <label className="form-control" for="phone">Phone:</label> -->} */}
-                <input
+              
+                <textarea
                   className="form-control mb-2"
-                  type="tel"
-                  id="message"
                   name="message"
-                  placeholder="01777777777"
-                  required
-                />
-
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Type Your Message"
+                ></textarea>
                 <input
                   className="btn btn-outline-secondary w-100 mb-2 text-center mx-auto"
                   type="submit"
                   value="Send Email"
                 />
-              </form>
+              </form> */}
             </div>
-            <div className="modal-footer">
-              {/* {/*{<!-- <button type="button" className="btn btn-primary">Save changes</button> -->} */}
-            </div>
+            <div className="modal-footer"></div>
           </div>
         </div>
       </div>

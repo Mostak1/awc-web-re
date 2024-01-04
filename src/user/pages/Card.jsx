@@ -31,6 +31,7 @@ export default function Card() {
               Package
             </li>
           </ol>
+          
         </div>
       </div>
     </>

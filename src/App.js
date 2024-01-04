@@ -26,6 +26,7 @@ import { Editprofile } from "./user/Editprofile";
 import Card from "./user/pages/Card";
 import Doctor from "./user/about/Doctor";
 import StemCell from "./user/pages/StemCell";
+import Vitamin from "./user/pages/Vitamin";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="membership-facilities" element={<Card />} />
             <Route path="doctor" element={<Doctor />} />
             <Route path="stemcell" element={<StemCell />} />
+            <Route path="vitamin" element={<Vitamin/>} />
             <Route path="*" element={<Nopage />} />
           </Route>
           <Route path="dashboard" element={

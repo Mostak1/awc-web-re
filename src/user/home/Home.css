@@ -13,15 +13,15 @@
 .aw_button{
   color: white;
   background-color: #014780;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
 }
 .aw_button:hover{
 background-color: #ffffff;
 color: #014780;
-border:2px solid #014780;
+border:1px solid #014780;
 transition: .8s;
 }
 .aw_head {
