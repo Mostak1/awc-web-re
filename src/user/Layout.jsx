@@ -241,16 +241,16 @@ export const Layout = () => {
                 </Link>
                 <ul className="dropdown-menu aw_bg">
                   <li>
-                    <Link className="dropdown-item aw_navtext fs-6" to="/vitamin">
-                    IV vitamin therapy
+                    <Link className="dropdown-item aw_navtext fs-6" to="/vitamin-shots">
+                    Vitamin Shots
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="dropdown-item aw_navtext fs-6"
-                      to="/doctor"
+                      to="/ozone-therapies"
                     >
-                      Our Doctors
+                      Ozone Therapies
                     </Link>
                   </li>
                   

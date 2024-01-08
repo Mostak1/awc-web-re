@@ -4,6 +4,19 @@
   /* font-family: "Poppins", sans-serif; */
   font-family: 'Roboto', sans-serif;
 }
+:root{
+  --first-color: #014780;
+  --second-color: #6ED1E0;
+  --text-one:#ffffff;
+  --text-two: #6E89E0;
+
+}
+.side-link{
+  color: var(--first-color);
+}
+.side-link:hover{
+  color: var(--text-two);
+}
 .fnt2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
@@ -11,37 +24,37 @@
   
 }
 .aw_button{
-  color: white;
-  background-color: #014780;
+  color: var(--text-one);
+  background-color: var(--first-color);
   padding: 5px;
   text-align: center;
   border-radius: 5px;
   width: 100%;
 }
 .aw_button:hover{
-background-color: #ffffff;
-color: #014780;
-border:1px solid #014780;
+background-color: var(--text-one);
+color: var(--first-color);
+border:1px solid var(--first-color);
 transition: .8s;
 }
 .aw_head {
-  color: #014780;
-  border-left: #014780 5px solid;
+  color: var(--first-color);
+  border-left: var(--first-color) 5px solid;
   padding-left: 15px;
   margin-bottom: 20px;
 }
 .aw_head1 {
-  color: #014780;
+  color: var(--first-color);
   font-weight: bold;
-  border-bottom: 8px solid #014780;
+  border-bottom: 8px solid var(--first-color);
   width: fit-content;
   margin: 0 auto;
 }
 .aw_clr {
-  color: #014780;
+  color: var(--first-color);
 }
 .aw_bg {
-  background-color: #014780;
+  background-color: var(--first-color);
   color: aliceblue;
 }
 .fnt3 {
@@ -52,8 +65,8 @@ transition: .8s;
 @media screen and (max-width: 600px) {
   .fs1 {
     width: fit-content;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid var(--text-one);
+    border-bottom: 2px solid var(--text-one);
     font-size: 40px;
     font-weight: 900;
     margin: 0 auto;
@@ -61,8 +74,8 @@ transition: .8s;
 }
 .fs1 {
   width: fit-content;
-  border-top: 2px solid #014780;
-  border-bottom: 2px solid #014780;
+  border-top: 2px solid var(--first-color);
+  border-bottom: 2px solid var(--first-color);
   font-size: 40px;
   font-weight: 900;
   margin: 0 auto;
@@ -88,12 +101,37 @@ transition: .8s;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #014780;
+  color: var(--first-color);
 }
 
+.aw-vitamine {
+    position: relative;
+    background: var(--first-color)60;
+    overflow: hidden;
+}
+.aw-vitamine::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: url(../../assets/img/vitaminbg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-position: center center;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 .aw_home {
     position: relative;
-    background: #01478060;
+    background: var(--first-color)60;
     overflow: hidden;
 }
 .aw_home::before {
@@ -132,25 +170,25 @@ transition: .8s;
   margin: 0 0 100px 0;
 }
 .aw_card {
-  background-color: #014780;
+  background-color: var(--first-color);
   padding: 25px;
   border-radius: 25px;
-  color: aquamarine;
+  color: var(--second-color);
   box-shadow: 0 0px 5px 5px rgba(222, 220, 220, 0.878);
 }
 .aw_card:hover {
-  color: #014780;
-  background-color: aquamarine;
+  color: var(--first-color);
+  background-color: var(--second-color);
   transition: .9s;
-  box-shadow: 0 0px 5px 5px #014780;
+  box-shadow: 0 0px 5px 5px var(--first-color);
 
 }
 
 .aw_midtitle {
-  background-color: #014780;
+  background-color: var(--first-color);
   padding: 20px 0 20px 0;
   font-size: 40px;
-  color: aquamarine;
+  color: var(--second-color);
   font-family: "Cormorant Garamond", serif;
   font-weight: bold;
 }

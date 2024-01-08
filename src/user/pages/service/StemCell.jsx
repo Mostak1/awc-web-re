@@ -1,8 +1,8 @@
 import React from "react";
-import "./Page.css";
-import img1 from "../../assets/img/stem_01.jpg";
-import img2 from "../../assets/img/stem_02.jpg";
-import img3 from "../../assets/img/stem_03.jpg";
+import "../Page.css";
+import img1 from "../../../assets/img/stem_01.jpg";
+import img2 from "../../../assets/img/stem_02.jpg";
+import img3 from "../../../assets/img/stem_03.jpg";
 
 export default function StemCell() {
   return (

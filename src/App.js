@@ -20,13 +20,13 @@ import DashLayout from "./admin/DashLayout";
 import DashHome from "./admin/pages/DashHome";
 import AddProducts from "./admin/pages/AddProducts";
 import User from "./admin/pages/User";
-import { Submititem } from "./user/product/Submititem";
 import { UserDetails } from "./user/UserDetails";
 import { Editprofile } from "./user/Editprofile";
 import Card from "./user/pages/Card";
 import Doctor from "./user/about/Doctor";
-import StemCell from "./user/pages/StemCell";
-import Vitamin from "./user/pages/Vitamin";
+import StemCell from "./user/pages/service/StemCell";
+import Vitamin from "./user/pages/service/Vitamin";
+import OzonTherapy from "./user/pages/service/OzonTherapy";
 
 function App() {
   return (
@@ -47,7 +47,8 @@ function App() {
             <Route path="membership-facilities" element={<Card />} />
             <Route path="doctor" element={<Doctor />} />
             <Route path="stemcell" element={<StemCell />} />
-            <Route path="vitamin" element={<Vitamin/>} />
+            <Route path="vitamin-shots" element={<Vitamin/>} />
+            <Route path="ozone-therapies" element={<OzonTherapy/>} />
             <Route path="*" element={<Nopage />} />
           </Route>
           <Route path="dashboard" element={
