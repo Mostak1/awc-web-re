@@ -4,15 +4,15 @@ import "./Home.css";
  * image imports
  ****************/
 import logo from "../../assets/img/Logo.png";
-import img1 from "../../assets/img/awc_01.jpg";
-import img2 from "../../assets/img/awc_02.jpg";
+// import img1 from "../../assets/img/awc_01.jpg";
+// import img2 from "../../assets/img/awc_02.jpg";
 import img4 from "../../assets/img/awc_04.png";
-import img3 from "../../assets/img/mt-1993-brand-img03.png";
+// import img3 from "../../assets/img/mt-1993-brand-img03.png";
 
 import img6 from "../../assets/img/awc_06.png";
 import img7 from "../../assets/img/awc_07.png";
 import img8 from "../../assets/img/awc_08.jpg";
-import img9 from "../../assets/img/mt-1993-img06.jpg";
+// import img9 from "../../assets/img/mt-1993-img06.jpg";
 
 import { FaMicroscope, FaDochub } from "react-icons/fa";
 

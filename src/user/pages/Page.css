@@ -27,6 +27,11 @@
   min-height: 100vh;
 }
 
+@media screen  and (max-width:700px){
+  .aw-mid-none{
+    display: none;
+  }
+}
 /* .image-container{
   width: 100%;
   height: 400px;
@@ -35,12 +40,54 @@
   background-image: url('https://integmeds.com/wp-content/uploads/2023/03/five-best-vitamins-for-beautiful-skin-products-with-royalty-free-image-950368148-1547504059.jpg');
   background-size: cover;
 } */
+.aw-ozon{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/IV-Ozone-Therapy.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-ozon::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-houston{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/bdbtbht.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-houston::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
 .image-container {
   position: relative;
   width: 100%;
   height: 400px;
   background-color: rgba(2, 1, 1, 0.8); /* Adjust the last value for opacity (0 to 1) */
-  background-image: url('https://integmeds.com/wp-content/uploads/2023/03/five-best-vitamins-for-beautiful-skin-products-with-royalty-free-image-950368148-1547504059.jpg');
+  background-image: url(../../assets/img/vitamin-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,19 +102,59 @@
   bottom: 0;
   left: 0;
   background-color: inherit;
-  opacity: 0.4; /* Adjust the opacity for the overlay color (0 to 1) */
+  opacity: 0.8; /* Adjust the opacity for the overlay color (0 to 1)  vitaminbg2 */
+}
+.vitaminbg2 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.9); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/vitamin-bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.position-absolute {
+.vitaminbg2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.4; /* Adjust the opacity for the overlay color (0 to 1)   */
+}
+
+.aw-position-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.overlay-text{
-  font-size: 50px;
+
+@media screen and (max-width:600px){
+  
+  .vitaminbg2 .aw-position-absolute {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* text-align: center; */
+    width: 100%;
+  }
+}
+
+.aw-overlay-text{
+  
   font-weight: 800;
+}
+.vitaminbg2 .aw-overlay-text{
+  /* font-size: 50px; */
+  line-height: 30px;
+  
 }
 /* Add any additional styles for your overlay text as needed */
 
