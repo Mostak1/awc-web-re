@@ -24,17 +24,19 @@
   
 }
 .aw_button{
-  color: var(--text-one);
-  background-color: var(--first-color);
+  background-color: var(--text-one);
+  color: var(--first-color);
   padding: 5px;
   text-align: center;
   border-radius: 5px;
+  border: 0px solid var(--first-color);
   width: 100%;
 }
 .aw_button:hover{
 background-color: var(--text-one);
 color: var(--first-color);
-border:1px solid var(--first-color);
+padding: 6px;
+/* border:1px solid var(--first-color); */
 transition: .8s;
 }
 .aw_head {

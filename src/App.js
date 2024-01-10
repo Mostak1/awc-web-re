@@ -28,6 +28,15 @@ import StemCell from "./user/pages/service/StemCell";
 import Vitamin from "./user/pages/service/Vitamin";
 import OzonTherapy from "./user/pages/service/OzonTherapy";
 import HoustonChiropractor from "./user/pages/service/HoustonChiropractor";
+import ModernAcupuncture from "./user/pages/service/ModernAcupuncture";
+import Kinesiology from "./user/pages/service/Kinesiology";
+import Naturopathy from "./user/pages/service/Naturopathy";
+import Comprehensive from "./user/pages/service/Comprehensive";
+import DietPlan from "./user/pages/service/DietPlan";
+import PersonalizedPlan from "./user/pages/service/PersonalizedPlan";
+import RootCause from "./user/pages/service/RootCause";
+import NaturalSupplement from "./user/pages/service/NaturalSupplement";
+import SuccessStories from "./user/pages/SuccessStories";
 
 function App() {
   return (
@@ -51,6 +60,15 @@ function App() {
             <Route path="vitamin-shots" element={<Vitamin/>} />
             <Route path="ozone-therapies" element={<OzonTherapy/>} />
             <Route path="houston-chiropractor" element={<HoustonChiropractor/>} />
+            <Route path="modern-acupuncture" element={<ModernAcupuncture/>} />
+            <Route path="kinesiology" element={<Kinesiology/>} />
+            <Route path="naturopathy" element={<Naturopathy/>} />
+            <Route path="comprehensive" element={<Comprehensive/>} />
+            <Route path="diet-plan" element={<DietPlan/>} />
+            <Route path="personalized" element={<PersonalizedPlan/>} />
+            <Route path="root-cause" element={<RootCause/>} />
+            <Route path="natural-supp" element={<NaturalSupplement/>} />
+            <Route path="success-stories" element={<SuccessStories/>} />
             <Route path="*" element={<Nopage />} />
           </Route>
           <Route path="dashboard" element={

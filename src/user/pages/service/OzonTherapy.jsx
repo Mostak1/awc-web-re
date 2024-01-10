@@ -25,7 +25,7 @@ export const OzonTherapy = () => {
             </div>
             <div className="col-md-5  ">
               <h3>Medical Ozone IV THERAPY</h3>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Medical Ozone Therapy is used to detox, kill infection treat
                 disease, boost the immune system and improve the body’s intake
                 and use of oxygen
@@ -55,7 +55,7 @@ export const OzonTherapy = () => {
             </div>
             <div className="col-md-6">
               <h2 data-aos="fade-left">HOW DOES MEDICAL OZONE WORK</h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 We create medical grade ozone (03) by using medical oxygen (02)
                 and an electromagnetic charged ion machine to attach O to the 02
                 (00) + 02) = 03) During an Ozone treatment, blood is withdrawn

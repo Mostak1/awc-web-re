@@ -12,6 +12,12 @@ a,p{
 }
 .aw_navtext{
     color: #ffffff;
+    background-color: #014780;
+}
+.aw_navtext:hover{
+    color: #ffffff;
+    font-weight: 800;
+    background-color: #014780;
 }
 .btnsr{
     background-color: #014780;

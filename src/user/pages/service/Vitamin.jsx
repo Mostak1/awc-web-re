@@ -23,7 +23,7 @@ export const Vitamin = () => {
             <div className="col-md-3 aw-mid-none">
               <Service/>
             </div>
-            <div className="col-md-5 fs-4 text-muted">
+            <div className="col-md-5 fs-5 text-muted">
               IM vitamin therapy in Houston Texas is a way of delivering
               nourishing vitamins, minerals, antioxidants, amino acids and more,
               right to a person’s blood stream. It’s a faster, more efficient
@@ -61,7 +61,7 @@ export const Vitamin = () => {
               <h2 data-aos="fade-left">
                 Who Benefits from IV Vitamin Therapy?
               </h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Anyone can benefit from intravenous therapy! Because it’s
                 introduced directly to the bloodstream, this treatment works at
                 a cellular level. It immediately effective, vitalizing,

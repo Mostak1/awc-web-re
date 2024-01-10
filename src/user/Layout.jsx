@@ -28,79 +28,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 
 export const Layout = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [user_email, setUser_email] = useState("");
-
-  // send email
-
-  //send email
-
-  let navigate = useNavigate();
+  const [isNavFixed, setNavFixed] = useState(false);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLogin(true);
-        const email = user.email;
-        // console.log(email);
-        setUser_email(email);
+    const handleScroll = () => {
+      // Check the scroll position and update the state
+      if (window.scrollY > 60) {
+        setNavFixed(true);
       } else {
-        setIsLogin(false);
+        setNavFixed(false);
       }
-    });
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   //***Log Out Config */
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        navigate("/login");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  };
+ 
   // ****************email send****************
-  const form = useRef();
-  const sendEmail = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form.current);
-
-    try {
-      const response = await fetch("https://awcbd.org/mail/mail.php", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: "Email sent successfully. We will contact you soon.",
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Email sending failed",
-        });
-      }
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "An error occurred",
-      });
-    }
-  };
+ 
   //************************     ***************/
   const bgclr1 = "rgba(0, 0, 0, 0.025)";
   return (
     <div>
       <div className="container">
         <div className="row mb-2">
-          <div className="col-md-5">
+          <div className="col-md-6">
             <Link className="text-decoration-none" href="#" to="/">
               <div className="row">
                 <div className="col-4">
@@ -112,8 +71,8 @@ export const Layout = () => {
               </div>
             </Link>
           </div>
-          <div className="col-md-4 mt-2">
-            <div className="align-middle">
+          <div className="col-md-6 mt-4 d-flex">
+            <div className="text-end">
               <a
                 href="https://www.facebook.com/awcbd.org/"
                 target="blank"
@@ -149,14 +108,11 @@ export const Layout = () => {
                 <FaLinkedin size={30} />
               </a>
             </div>
-            <div className="fs-3 aw_clr">+8809666-747470</div>
+            <div className="fs-3 text-end aw_clr">+8809666-747470</div>
           </div>
-          <div className="col-md-3">
-            {/* <div className="aw_button  fs-3 mt-4">
+          {/* <div className="col-md-3">
             
-            </div> */}
             <div className="nav-item">
-              {/* {/*{<!-- Button trigger modal -->} */}
               <button
                 type="button"
                 className="aw_button  fs-5 mt-4 w-75"
@@ -166,10 +122,10 @@ export const Layout = () => {
                 <FontAwesomeIcon icon={faBook} /> Appointment
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light aw_bg">
+      <nav className={isNavFixed ? 'navbar navbar-expand-lg navbar-light aw_bg fixed-top' : 'navbar navbar-expand-lg navbar-light aw_bg'}>
         <div className="container">
           <button
             className="navbar-toggler"
@@ -186,7 +142,7 @@ export const Layout = () => {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
-                  className="nav-link aw_navtext fs-4 me-3"
+                  className="nav-link aw_navtext fs-5 me-3"
                   aria-current="page"
                   to="/"
                 >
@@ -196,7 +152,7 @@ export const Layout = () => {
 
               <li className="nav-item dropdown ">
                 <Link
-                  className="nav-link dropdown-toggle aw_navtext fs-4 me-3"
+                  className="nav-link dropdown-toggle aw_navtext fs-5 me-3"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -231,7 +187,7 @@ export const Layout = () => {
               </li>
               <li className="nav-item dropdown ">
                 <Link
-                  className="nav-link dropdown-toggle aw_navtext fs-4 me-3"
+                  className="nav-link dropdown-toggle aw_navtext fs-5 me-3"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -261,20 +217,76 @@ export const Layout = () => {
                       Houston Chiropractor
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/modern-acupuncture"
+                    >Modern-acupuncture
+                    
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/kinesiology"
+                    >Kinesiology
+                    
+                    </Link>
+                  </li>
                   
                   <li>
                     <Link
                       className="dropdown-item aw_navtext fs-6"
-                      to="/founder"
+                      to="/naturopathy"
                     >
-                      Founder
+                      Naturopathy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/comprehensive"
+                    >
+                      Comprehensive
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/diet-plan"
+                    >
+                      Diet Plan
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/personalized"
+                    >
+                     Personalized treatment plan
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/root-cause"
+                    >
+                    Healing root cause of disease
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item aw_navtext fs-6"
+                      to="/natural-supp"
+                    >
+                   Natural-supp
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link aw_navtext fs-4 me-3"
+                  className="nav-link aw_navtext fs-5 me-3"
                   aria-current="page"
                   to="/membership-facilities"
                 >
@@ -283,132 +295,27 @@ export const Layout = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link aw_navtext fs-4 me-3"
+                  className="nav-link aw_navtext fs-5 me-3"
                   aria-current="page"
-                  to="/stemcell"
+                  to="/success-stories"
                 >
-                  Stem Cell Therapy
+                  Success Stories
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                                <Link className="nav-link" to='/contact' >Contact Us</Link>
-                            </li> */}
-              {/* {
-                                isLogin && <li className="nav-item">
-                                    <Link to="dashboard" className="nav-link" >Dashboard</Link>
-                                </li>
-                            } */}
-
-              {/* {isLogin && */}
-              {/* <li className="nav-item dropdown ">
-                <Link
-                  className="nav-link dropdown-toggle aw_navtext fs-4"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Decorations
-                </Link>
-                <ul className="dropdown-menu aw_bg">
-                  <li>
-                    <Link
-                      className="dropdown-item aw_navtext fs-6"
-                      to="/gatedecoration"
-                    >
-                      Gate Decorations
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item aw_navtext fs-6" to="/stage">
-                      Stage Decorations
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item aw_navtext fs-6" to="/hall">
-                      Hall Decorations
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dropdown-item aw_navtext fs-6"
-                      to="/photoshoot"
-                    >
-                      Photoshoot Decorations
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link
-                      className="dropdown-item aw_navtext fs-6"
-                      to="/selected"
-                    >
-                      Selected Items
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dropdown-item aw_navtext fs-6"
-                      to="/submititem"
-                    >
-                      Choice List
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
+             
             </ul>
           </div>
 
           <div className="nav-item">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              {!isLogin && (
-                <li className="nav-item">
-                  <Link to="login" className="nav-link aw_navtext fs-4">
-                    Login
-                  </Link>
-                </li>
-              )}
-              {isLogin && (
-                <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle aw_navtext fs-4"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Welcome
-                  </Link>
-                  <ul className="dropdown-menu aw_navtext aw_bg">
-                    <li>
-                      <Link className="dropdown-item" to="/userDetails">
-                        Profile
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item aw_navtext fs-6"
-                        to="/editprofile"
-                      >
-                        Edit Profile
-                      </Link>
-                    </li>
-
-                    <li className="">
-                      <Link
-                        onClick={handleLogout}
-                        style={{ cursor: "pointer" }}
-                        className="dropdown-item aw_navtext fs-6"
-                      >
-                        Log Out
-                      </Link>
-                      {/* <p>{user_email}</p> */}
-                    </li>
-                  </ul>
-                </li>
-              )}
+            <button
+                type="button"
+                className="aw_button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <FontAwesomeIcon icon={faBook} /> Appointment
+              </button>
             </ul>
           </div>
         </div>
@@ -443,21 +350,7 @@ export const Layout = () => {
             </div>
             <p className="titleclr"></p>
             <div className="modal-body">
-              {/* <form ref={form} onSubmit={sendEmail}>
-              <label className="form-label">Name</label>
-              <input className="form-control" type="text" name="user_name" />
-              <label className="form-label">Email</label>
-              <input className="form-control" type="email" name="user_email" />
-              <label className="form-label">Message</label>
-              <textarea className="form-control" name="message" />
-              <input
-                className="btn btn-outline-primary my-4"
-                type="submit"
-                value="Send Email"
-              />
-            </form> */}
               <div className="">
-                {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScK3XA_MCVuqJS1n8YUol6TulEHIydBOf1ZcvPrUvO7iUSj6A/viewform?fbzx=-8665727092727921790" className="w-100 full-height-container"  frameborder="0"></iframe> */}
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLScgOBupbtdMFc4xZO9FPlwrmmKK9rTrAV5RrbF478G0GHCXoQ/viewform?embedded=true"
                   className="w-100 full-height-container"
@@ -468,40 +361,7 @@ export const Layout = () => {
                   Loading…
                 </iframe>
               </div>
-              {/* <form id="myForm" ref={form} onSubmit={sendEmail}>
-               
-                <input
-                  className="form-control mb-2"
-                  type="text"
-                  id="user_name"
-                  name="user_name"
-                  placeholder="Name*"
-                  required
-                />
-               
-                <input
-                  className="form-control mb-2"
-                  type="text"
-                  id="user_email"
-                  name="user_email"
-                  placeholder="01832546585"
-                  required
-                />
               
-                <textarea
-                  className="form-control mb-2"
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  placeholder="Type Your Message"
-                ></textarea>
-                <input
-                  className="btn btn-outline-secondary w-100 mb-2 text-center mx-auto"
-                  type="submit"
-                  value="Send Email"
-                />
-              </form> */}
             </div>
             <div className="modal-footer"></div>
           </div>

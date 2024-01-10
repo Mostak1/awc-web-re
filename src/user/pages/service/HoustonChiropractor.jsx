@@ -26,7 +26,7 @@ export const HoustonChiropractor = () => {
             </div>
             <div className="col-md-5 ">
               <h3>What is chiropractic?</h3>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Chiropractic is a healthcare profession or discipline that
                 diagnoses, treats and prevents the mechanical disorders of the
                 neuromusculoskeletal system, especially the spine. Chiropractic
@@ -60,7 +60,7 @@ export const HoustonChiropractor = () => {
             </div>
             <div className="col-md-6">
               <h2 data-aos="fade-left">What is an adjustment?</h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Chiropractic manipulation therapy (CMT), also called adjustment,
                 is the manipulative technique involving hands-on manipulation of
                 the spine or other joints, with hands (manual manipulation),
@@ -73,7 +73,7 @@ export const HoustonChiropractor = () => {
           <div className="row g-4 my-5">
             <div className="col-md-6">
               <h2 data-aos="fade-left">Who are chiropractors?</h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Chiropractic professionals are doctors of chiropractic, DC’s, or
                 chiropractors. Although it has many similar attributes of
                 primary care physicians (PCPs) for general health, a
@@ -133,7 +133,7 @@ export const HoustonChiropractor = () => {
             </div>
             <div className="col-md-6">
               <h2 data-aos="fade-left">How can I achieve good posture?</h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Postural training can help delay onset of symptoms related to
                 DJD. For instance, good standing posture presents when a
                 vertical line can be drawn passing through the ears, shoulders,
@@ -149,7 +149,7 @@ export const HoustonChiropractor = () => {
               <h2 data-aos="fade-left">
                 How can young people benefit from posture training?
               </h2>
-              <div className="fs-4 text-muted">
+              <div className="fs-5 text-muted">
                 Good posture early in life ensures the healthy development of
                 your body and prevents DJD later. Poor posture can be corrected
                 before any joint damage is done. Posture training will benefit

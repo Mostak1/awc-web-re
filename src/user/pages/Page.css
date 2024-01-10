@@ -40,6 +40,120 @@
   background-image: url('https://integmeds.com/wp-content/uploads/2023/03/five-best-vitamins-for-beautiful-skin-products-with-royalty-free-image-950368148-1547504059.jpg');
   background-size: cover;
 } */
+/* Sucess Stories */
+.success-header{
+  font-weight: 900;
+  font-size: 50px;
+  background-color: rgb(201, 200, 200);
+  height: 200px;
+}
+
+/* Sucess Stories */
+.aw-supplement{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/supbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-supplement::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-personalized{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/per1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-personalized::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-dietplan{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/dietbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-dietplan::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-comprehensive{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/comprehensive.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-comprehensive::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-acupuncture{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/acupuncture.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-acupuncture::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
 .aw-ozon{
   position: relative;
   width: 100%;
@@ -52,6 +166,48 @@
   overflow: hidden;
 }
 .aw-ozon::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-naturopathy {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/iSNutrition-.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-naturopathy ::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  opacity: 0.8; 
+}
+.aw-kinesiology{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(2, 1, 1, 0.842); /* Adjust the last value for opacity (0 to 1) */
+  background-image: url(../../assets/img/kinesiology.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.aw-kinesiology::before{
   content: "";
   position: absolute;
   top: 0;
@@ -152,7 +308,6 @@
 }
 
 .aw-position-absolute {
-.aw-position-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,7 +327,6 @@
   }
 }
 
-.aw-overlay-text{
   
 
 @media screen and (max-width:600px){
@@ -202,4 +356,3 @@
   
 }
 /* Add any additional styles for your overlay text as needed */
-
